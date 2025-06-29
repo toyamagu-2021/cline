@@ -26,9 +26,12 @@ const GeneralSettingsSection = ({
 				{chatSettings && <PreferredLanguageSetting chatSettings={chatSettings} setChatSettings={setChatSettings} />}
 
 				<div className="mb-[15px]">
-					<label style={{ fontWeight: "500", display: "block", marginBottom: 5 }}>User Documents Path</label>
+					<label htmlFor="userDocumentsPath" style={{ fontWeight: "500", display: "block", marginBottom: 5 }}>
+						User Documents Path
+					</label>
 					<VSCodeTextField
-						style={{ width: "100%" }}
+						id="userDocumentsPath"
+						className="w-full"
 						value={chatSettings?.userDocumentsPath || ""}
 						placeholder="~/Documents (default)"
 						onChange={(e: any) => {
